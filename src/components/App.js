@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider, Route, Routes } from 'react-router-dom';
-import '../sass/App.scss';
+import '../style/App.scss';
 import logements from '../data/logements.json';
 import Home from '../pages/Home/Home';
 import About from '../pages/About/About';

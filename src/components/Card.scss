@@ -1,0 +1,82 @@
+@import '../style/utils/mixin.scss';
+
+.card {
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    @include card-gradient;
+    margin: 30px;
+
+    &__content {
+        width: 340px;
+        height: 340px;
+        border-radius: 10px;
+        background: #ff6060;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 20px;
+
+        h2 {
+            width: 300px;
+            height: 52px;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 25.67px;
+            color: #ffffff;
+            margin: 0px;
+        }
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 829px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    background-color: #F6F6F6;
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+        height: auto;
+
+        &__content {
+            width: 100%;
+        }
+
+        h2 {
+            width: 100%;
+        }
+    }
+
+    .gallery {
+        height: auto;
+        background-color: #FFFFFF;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .card {
+        width: 335px;
+        height: 255px;
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+
+    .gallery {
+        margin-top: 30px;
+        background-color: #FFFFFF;
+    }
+}

@@ -2,11 +2,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-left: 60px;
+    margin-right: 50px;
 
-    &_logo {
+    &__logo {
         width: 210px;
         height: 68px;
     }
@@ -15,10 +15,51 @@
         ul {
             display: flex;
 
+            a {
+                text-decoration: none;
+                color: black;
+                font-size: 24px;
+
+
+                &.underline {
+                    text-decoration: underline;
+                }
+            }
+
             li {
                 list-style: none;
                 margin: 0 25px;
 
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header {
+        margin-top: 5px;
+        margin-left: 15px;
+        margin-right: 15px;
+
+        &__logo {
+            width: 145px;
+        }
+
+        nav {
+            ul {
+                text-align: center;
+                padding: 0;
+                margin: 0;
+
+                a {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                }
+
+                li {
+                    margin: 0 10px;
+
+                }
             }
         }
     }
