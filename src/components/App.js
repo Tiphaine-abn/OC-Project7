@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider, Route, Routes } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import '../style/App.scss';
 import logements from '../data/logements.json';
 import Home from '../pages/Home/Home';
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     element: <About />,
   },
   {
-    path: "/accommodation",
+    path: "/accommodation/:id",
     element: <Accommodation />,
   },
   {

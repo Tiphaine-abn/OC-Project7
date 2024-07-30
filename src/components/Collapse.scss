@@ -41,6 +41,7 @@
     border-radius: 5px;
     color: black;
     background-color: #F6F6F6;
+    animation: ToggleAnim 0.5s ease 0s 1 normal forwards;
 
     p {
         margin: 0px;
@@ -54,9 +55,22 @@
     margin-bottom: 20px;
 }
 
+@keyframes ToggleAnim {
+    0% {
+        opacity: 0;
+        transform: rotateX(70deg);
+        transform-origin: top;
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg);
+        transform-origin: top;
+    }
+}
+
 @media screen and (max-width: 980px) {
     .collapse-section {
         margin: 0px;
     }
-
 }
