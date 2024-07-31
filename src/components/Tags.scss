@@ -1,0 +1,28 @@
+/* Tags.scss */
+
+.tags-content {
+    width: 365px;
+    height: auto;
+    position: relative;
+
+    .tags__style {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .tags__text {
+        width: auto;
+        height: 25px;
+        margin: 5px;
+        border-radius: 10px;
+        background-color: #FF6060;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 25px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 0 30px;
+    }
+}

@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 60px;
+    margin-bottom: 30px;
 }
 
 .slide-image {
@@ -41,4 +42,34 @@ button {
 button img {
     width: 46.68px;
     height: 79.2px;
+}
+
+.slide-counter {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFFFFF;
+    padding: 5px 10px;
+    font-size: 18px;
+    z-index: 2;
+}
+
+@media (max-width: 375px) {
+    .slideshow-container {
+        height: 255px;
+        margin-top: 40px;
+
+    }
+
+    .slide-image {
+        width: 335px;
+        height: 255px;
+        border-radius: 10px;
+    }
+
+    button img {
+        width: 11.67px;
+        height: 19.8px;
+    }
 }

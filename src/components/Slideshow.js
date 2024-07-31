@@ -7,12 +7,32 @@ const Slideshow = ({ images }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const nextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setCurrentIndex((prevIndex) => {
+            if (prevIndex < images.length - 1) {
+                return prevIndex + 1;
+            } else {
+                return 0;
+            }
+        });
     };
 
     const prevSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-    };
+        setCurrentIndex((prevIndex) => {
+            if (prevIndex > 0) {
+                return prevIndex - 1;
+            } else {
+                return images.length - 1;
+            }
+        });
+    }
+
+    if (images.length === 1) {
+        return (
+            <div className="slideshow-container">
+                <img src={images[0]} alt="Unique Slide" className="slide-image" />
+            </div>
+        );
+    }
 
     return (
         <div className="slideshow-container">
@@ -23,6 +43,9 @@ const Slideshow = ({ images }) => {
             <button onClick={nextSlide} className="arrow arrow-right">
                 <img src={ArrowRight} alt="Next Slide" />
             </button>
+            <div className="slide-counter">
+                {currentIndex + 1}/{images.length}
+            </div>
         </div>
     );
 };

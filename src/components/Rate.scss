@@ -1,0 +1,10 @@
+.rating-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+
+    &__star {
+        width: 36px;
+        height: 36px;
+    }
+}

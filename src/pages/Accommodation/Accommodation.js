@@ -3,6 +3,11 @@ import Footer from "../../components/Footer";
 import { useParams } from "react-router-dom";
 import logements from '../../data/logements.json';
 import Slideshow from "../../components/Slideshow";
+import Collapse from '../../components/Collapse';
+import Tags from '../../components/Tags';
+import Rate from '../../components/Rate';
+import './Accommodation.scss';
+
 
 const findLogementId = (id) => {
     return logements.find((logement) => logement.id === id);
@@ -16,18 +21,37 @@ function Accommodation() {
         <>
             <Header />
             <main className="main">
-                <div className="slideshow">
-                    <Slideshow images={pictures} />
-                </div>
-                <h1>{logement.title}</h1>
-                <p>{logement.location}</p>
-                <p>{logement.host.name}</p>
-                <p>{logement.tags}</p>
-                <p>{logement.rating}</p>
-                <h2>Description</h2>
-                <p>{logement.description}</p>
-                <h2>Equipements</h2>
-                <p>{logement.equipments}</p>
+                <section className="accommodation-page">
+                    <div className="slideshow">
+                        <Slideshow images={pictures} />
+                    </div>
+                    <div className="infos-section">
+                        <div className="titles-contener">
+                            <h1>{logement.title}</h1>
+                            <h2>{logement.location}</h2>
+                            <Tags tag={logement.tags} />
+                        </div>
+                        <div className="info-host">
+                            <div className="info-host__identity">
+                                <p className="info-host__name">{logement.host.name}</p>
+                                <img className="info-host__picture" src={logement.host.picture} alt="" />
+                            </div>
+                        </div>
+                        <Rate rating={logement.rating} />
+                    </div>
+                    <div className="collapse-section">
+                        <Collapse title="Description">
+                            <p>{logement.description}</p>
+                        </Collapse>
+                        <Collapse title="Équipements">
+                            <ul>
+                                {logement.equipments.map((equipment, index) => (
+                                    <li key={index}>{equipment}</li>
+                                ))}
+                            </ul>
+                        </Collapse>
+                    </div>
+                </section>
             </main>
             <Footer />
         </>
