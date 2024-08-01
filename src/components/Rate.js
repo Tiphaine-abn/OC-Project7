@@ -8,9 +8,9 @@ function Rating({ rating }) {
         <div className="rating-container">
             {rate.map((rateStars) =>
                 rating >= rateStars ? (
-                    <img src={starActive} alt="Active Star" key={rateStars} className="rating-star" />
+                    <img src={starActive} alt="Etoile active" key={rateStars} className="rating-star" />
                 ) : (
-                    <img src={starInactive} alt="Inactive Star" key={rateStars} className="rating-star" />
+                    <img src={starInactive} alt="Etoile inactive" key={rateStars} className="rating-star" />
                 )
             )}
         </div>

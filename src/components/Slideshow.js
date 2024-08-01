@@ -29,7 +29,7 @@ const Slideshow = ({ images }) => {
     if (images.length === 1) {
         return (
             <div className="slideshow-container">
-                <img src={images[0]} alt="Unique Slide" className="slide-image" />
+                <img src={images[0]} alt="Diapositive unique" className="slide-image" />
             </div>
         );
     }
@@ -37,11 +37,11 @@ const Slideshow = ({ images }) => {
     return (
         <div className="slideshow-container">
             <button onClick={prevSlide} className="arrow arrow-left">
-                <img src={ArrowLeft} alt="Previous Slide" />
+                <img src={ArrowLeft} alt="Diapositive précédente" />
             </button>
             <img src={images[currentIndex]} alt={`Slide ${currentIndex}`} className="slide-image" />
             <button onClick={nextSlide} className="arrow arrow-right">
-                <img src={ArrowRight} alt="Next Slide" />
+                <img src={ArrowRight} alt="Diapositive suivante" />
             </button>
             <div className="slide-counter">
                 {currentIndex + 1}/{images.length}

@@ -3,6 +3,8 @@ import Footer from "../../components/Footer";
 import Banner from "../../components/Banner";
 import Collapse from "../../components/Collapse";
 import Img2 from '../../assets/Img2.png'
+import './About.scss';
+
 
 function About() {
     return (

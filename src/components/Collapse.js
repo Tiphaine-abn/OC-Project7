@@ -12,7 +12,7 @@ function Collapse({ title, children }) {
         <div>
             <div className="collapse" onClick={toggle}>
                 <h3>{title}</h3>
-                <img src={Arrow} alt="Toggle"
+                <img src={Arrow} alt="Cliquez pour dérouler le texte"
                     className={`collapse-arrow ${isOpen ? 'open' : 'closed'}`} />
             </div>
             <div className={`collapse-content ${isOpen ? 'open' : 'closed'}`}>

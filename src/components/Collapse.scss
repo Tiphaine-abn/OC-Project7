@@ -13,6 +13,8 @@
     font-size: 24px;
     padding: 10px 20px;
     color: #FFFFFF;
+    gap: 10px;
+    margin: 0px;
 
     h3 {
         margin: 0px;
@@ -29,7 +31,8 @@
 }
 
 .collapse-arrow.open {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
+    margin: 0px;
 }
 
 .collapse-content.open {
@@ -52,7 +55,13 @@
 .collapse-content.closed {
     max-height: 0;
     opacity: 0;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+
+    p,
+    ul {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 @keyframes ToggleAnim {
@@ -72,5 +81,28 @@
 @media screen and (max-width: 980px) {
     .collapse-section {
         margin: 0px;
+    }
+
+    .collapse-content.closed {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .collapse {
+        font-size: 13px;
+    }
+
+    .collapse-arrow {
+        height: 10px;
+    }
+
+    .collapse-content.open {
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    .collapse-content.closed {
+        margin-bottom: 10px;
     }
 }

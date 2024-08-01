@@ -1,21 +1,21 @@
-/* Tags.scss */
-
 .tags-content {
-    width: 365px;
+    width: 100%;
     height: auto;
     position: relative;
+    margin-top: 15px;
 
     .tags__style {
         display: flex;
         padding: 0;
         margin: 0;
         list-style: none;
+        gap: 5px;
     }
 
     .tags__text {
         width: auto;
         height: 25px;
-        margin: 5px;
+        margin-right: 5px;
         border-radius: 10px;
         background-color: #FF6060;
         font-weight: 700;
@@ -24,5 +24,21 @@
         text-align: center;
         color: #FFFFFF;
         padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .tags-content {
+        .tags__style {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tags-content {
+        .tags__text {
+            font-size: 10px;
+        }
     }
 }
