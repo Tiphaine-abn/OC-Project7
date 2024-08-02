@@ -2,7 +2,7 @@ import starActive from '../assets/Star-active.svg';
 import starInactive from '../assets/Star-inactive.svg';
 import './Rate.scss';
 
-function Rating({ rating }) {
+export default function Rating({ rating }) {
     const rate = [1, 2, 3, 4, 5]
     return (
         <div className="rating-container">
@@ -16,4 +16,3 @@ function Rating({ rating }) {
         </div>
     );
 }
-export default Rating;

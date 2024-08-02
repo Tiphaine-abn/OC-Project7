@@ -1,7 +1,7 @@
 import './Footer.scss'
 import logo from '../assets/logo-white.png';
 
-function Footer() {
+export default function Footer() {
     return (
         <footer className="App-footer">
             <img src={logo} className="App-logo" alt="Logo Kasa" />
@@ -9,4 +9,3 @@ function Footer() {
         </footer>
     )
 }
-export default Footer;

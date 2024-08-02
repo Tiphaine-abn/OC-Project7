@@ -55,21 +55,46 @@ button img {
     z-index: 2;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
     .slideshow-container {
-        height: 255px;
+        height: 350px;
         margin-top: 40px;
-
+        margin-bottom: 20px;
     }
 
     .slide-image {
-        width: 335px;
+        border-radius: 15px;
+    }
+
+    button img {
+        width: 30px;
+        height: 50px;
+    }
+
+    .slide-counter {
+        font-size: 16px;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 375px) {
+    .slideshow-container {
         height: 255px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .slide-image {
         border-radius: 10px;
     }
 
     button img {
-        width: 11.67px;
-        height: 19.8px;
+        width: 20px;
+        height: 35px;
+    }
+
+    .slide-counter {
+        font-size: 14px;
+        padding: 3px 6px;
     }
 }

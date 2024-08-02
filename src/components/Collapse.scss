@@ -1,7 +1,5 @@
 .collapse-section {
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 50px;
+    margin: 50px 100px 0;
 }
 
 .collapse {
@@ -14,10 +12,10 @@
     padding: 10px 20px;
     color: #FFFFFF;
     gap: 10px;
-    margin: 0px;
+    margin: 0;
 
     h3 {
-        margin: 0px;
+        margin: 0;
     }
 }
 
@@ -32,35 +30,38 @@
 
 .collapse-arrow.open {
     transform: rotate(-180deg);
-    margin: 0px;
+    margin: 0;
 }
 
-.collapse-content.open {
-    max-height: 200px;
-    margin-bottom: 30px;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 25.67px;
-    border-radius: 5px;
-    color: black;
-    background-color: #F6F6F6;
-    animation: ToggleAnim 0.5s ease 0s 1 normal forwards;
-
-    p {
-        margin: 0px;
-        padding: 15px;
-    }
-}
-
-.collapse-content.closed {
+.collapse-content {
     max-height: 0;
     opacity: 0;
     margin-bottom: 25px;
 
-    p,
-    ul {
-        margin: 0;
-        padding: 0;
+    &.open {
+        max-height: 200px;
+        margin-bottom: 30px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25.67px;
+        border-radius: 5px;
+        color: black;
+        background-color: #F6F6F6;
+        animation: ToggleAnim 0.5s ease 0s 1 normal forwards;
+
+        p {
+            margin: 0;
+            padding: 15px;
+        }
+    }
+
+    &.closed {
+
+        p,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
     }
 }
 
@@ -80,11 +81,15 @@
 
 @media screen and (max-width: 980px) {
     .collapse-section {
-        margin: 0px;
+        margin: 0;
+    }
+
+    .collapse {
+        font-size: 18px;
     }
 
     .collapse-content.closed {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 }
 
@@ -103,6 +108,6 @@
     }
 
     .collapse-content.closed {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 }

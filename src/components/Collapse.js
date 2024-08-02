@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import './Collapse.scss';
 import Arrow from '../assets/Arrow.png';
 
-
-function Collapse({ title, children }) {
+export default function Collapse({ title, children }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => { setIsOpen(!isOpen); }
@@ -21,5 +20,3 @@ function Collapse({ title, children }) {
         </div >
     );
 }
-
-export default Collapse;

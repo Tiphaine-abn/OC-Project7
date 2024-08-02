@@ -1,14 +1,17 @@
 @import '../style/utils/mixin.scss';
 
 .card {
-    width: 340px;
-    height: 340px;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    margin: 20px;
     background: #ff6060;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
 
     &__content {
         width: 100%;
@@ -25,48 +28,55 @@
             height: 100%;
             object-fit: cover;
             position: absolute;
+            top: 0;
             left: 0;
             z-index: 1;
         }
+    }
 
-        h2 {
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 25.67px;
-            color: #ffffff;
-            @include card-gradient;
-            margin: 0;
-            z-index: 2;
-            padding: 0 10px 10px;
-            border-radius: 5px;
-            white-space: normal;
-        }
+    &__title-background {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        @include card-gradient;
+        z-index: 2;
+    }
+
+    &__title-text {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25.67px;
+        color: #ffffff;
+        margin: 0;
+        white-space: normal;
+        max-width: calc(100% - 20px);
+        box-sizing: border-box;
     }
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     background-color: #F6F6F6;
     border-radius: 25px;
-    padding: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    justify-items: center;
 }
 
-@media screen and (max-width: 980px) {
-    .card {
-        width: 100%;
-        margin: 0;
-        margin-top: 25px;
+@media screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        background-color: #FFFFFF;
+        padding: 0;
+        gap: 20px;
     }
 
-    .gallery {
-        background-color: #FFFFFF;
-        padding: 0px;
+    .card {
+        margin: 0;
     }
 }

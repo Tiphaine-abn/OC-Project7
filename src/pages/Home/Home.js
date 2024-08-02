@@ -4,9 +4,8 @@ import Footer from "../../components/Footer";
 import Card from "../../components/Card";
 import Img1 from '../../assets/Img1.png';
 import logements from '../../data/logements.json';
-import './Home.scss';
 
-function Home() {
+export default function Home() {
     return (
         <>
             <Header />
@@ -20,5 +19,3 @@ function Home() {
         </>
     )
 }
-
-export default Home;

@@ -2,14 +2,18 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Card.scss';
 
-function Card({ logements }) {
+export default function Card({ logements }) {
     return (
         <>
             {logements.map((logement) => (
                 <Link to={`/accommodation/${logement.id}`} className="card" key={logement.id}>
                     <div className="card__content">
                         <img src={logement.cover} alt={logement.title} />
-                        <h2>{logement.title}</h2>
+                        <div className="card__title-background">
+                            <div className="card__title-text">
+                                {logement.title}
+                            </div>
+                        </div>
                     </div>
                 </Link>
             ))}
@@ -20,5 +24,3 @@ function Card({ logements }) {
 Card.propTypes = {
     logements: PropTypes.array.isRequired
 };
-
-export default Card;

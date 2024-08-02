@@ -1,6 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import logements from '../../data/logements.json';
 import Slideshow from "../../components/Slideshow";
 import Collapse from '../../components/Collapse';
@@ -12,9 +12,14 @@ const findLogementId = (id) => {
     return logements.find((logement) => logement.id === id);
 }
 
-function Accommodation() {
+export default function Accommodation() {
     const { id } = useParams();
     const logement = findLogementId(id);
+
+    if (!logement) {
+        return <Navigate to="/NotFound" />;
+    }
+
     const pictures = logement.pictures;
     return (
         <>
@@ -62,6 +67,3 @@ function Accommodation() {
         </>
     );
 }
-
-
-export default Accommodation;
