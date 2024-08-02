@@ -1,5 +1,6 @@
 import './Banner.scss';
 
+// Composant pour afficher une image avec du texte superposé
 export default function Banner({ img, text, additionalClass }) {
     return (
         <div className={`banner ${additionalClass}`}>

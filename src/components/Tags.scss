@@ -26,6 +26,7 @@
     }
 }
 
+// Styles pour les écrans de moins de 980px et 480px (responsive)
 @media screen and (max-width: 980px) {
     .tags__style {
         flex-wrap: wrap;

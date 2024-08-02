@@ -5,6 +5,7 @@ import Card from "../../components/Card";
 import Img1 from '../../assets/Img1.png';
 import logements from '../../data/logements.json';
 
+// Composant pour afficher la page d'accueil
 export default function Home() {
     return (
         <>

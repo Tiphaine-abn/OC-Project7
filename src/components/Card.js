@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Card.scss';
 
+// Composant pour afficher une liste de logements sous forme de cartes cliquables
 export default function Card({ logements }) {
     return (
         <>
@@ -21,6 +22,7 @@ export default function Card({ logements }) {
     );
 }
 
+// Définition des types de props pour le composant Card
 Card.propTypes = {
-    logements: PropTypes.array.isRequired
+    logements: PropTypes.array.isRequired // La prop "logements" doit être un tableau
 };

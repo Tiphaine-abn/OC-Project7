@@ -3,9 +3,11 @@ import './Slideshow.scss';
 import ArrowLeft from '../assets/ArrowLeft.png';
 import ArrowRight from '../assets/ArrowRight.png';
 
+// Composant pour afficher une diapositive avec navigation
 const Slideshow = ({ images }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0); // Index de l'image actuelle
 
+    // Fonction pour passer à la diapositive suivante
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => {
             if (prevIndex < images.length - 1) {
@@ -16,6 +18,7 @@ const Slideshow = ({ images }) => {
         });
     };
 
+    // Fonction pour revenir à la diapositive précédente
     const prevSlide = () => {
         setCurrentIndex((prevIndex) => {
             if (prevIndex > 0) {
@@ -26,6 +29,7 @@ const Slideshow = ({ images }) => {
         });
     }
 
+    // Affichage d'une seule image si le tableau des images contient une seule image
     if (images.length === 1) {
         return (
             <div className="slideshow-container">
@@ -34,6 +38,7 @@ const Slideshow = ({ images }) => {
         );
     }
 
+    // Affichage du diaporama avec navigation
     return (
         <div className="slideshow-container">
             <button onClick={prevSlide} className="arrow arrow-left">

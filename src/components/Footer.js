@@ -1,6 +1,7 @@
 import './Footer.scss'
 import logo from '../assets/logo-white.png';
 
+// Composant pour afficher le pied de page
 export default function Footer() {
     return (
         <footer className="App-footer">

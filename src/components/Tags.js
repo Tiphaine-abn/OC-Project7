@@ -1,5 +1,6 @@
 import './Tags.scss';
 
+// Composant pour afficher une liste de mots clés
 function Tags({ tag }) {
     return (
         <div className="tags-content">

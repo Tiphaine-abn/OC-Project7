@@ -2,6 +2,7 @@
     margin: 50px 100px 0;
 }
 
+// Conteneur des collapses
 .collapse {
     display: flex;
     justify-content: space-between;
@@ -33,6 +34,7 @@
     margin: 0;
 }
 
+// Contenu du collapse
 .collapse-content {
     max-height: 0;
     opacity: 0;
@@ -65,6 +67,7 @@
     }
 }
 
+// Animation pour le dépliage du contenu
 @keyframes ToggleAnim {
     0% {
         opacity: 0;
@@ -79,6 +82,7 @@
     }
 }
 
+// Styles pour les écrans de moins de 980px et 375px (responsive)
 @media screen and (max-width: 980px) {
     .collapse-section {
         margin: 0;

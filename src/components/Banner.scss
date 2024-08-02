@@ -1,5 +1,6 @@
 @import '../style/utils/mixin.scss';
 
+// Conteneur principal pour la bannière
 .banner {
     display: flex;
     align-items: center;
@@ -55,6 +56,7 @@
     }
 }
 
+// Styles pour les écrans de moins de 768px de large (responsive)
 @media screen and (max-width: 768px) {
     .banner {
         height: 111px;
@@ -64,7 +66,8 @@
         &__text {
             font-size: clamp(1.2rem, 4vw, 2rem);
             width: 80%;
-            left: 50%;
+            left: 12%;
+            transform: translate(-10%, -50%);
             padding: 0;
             text-align: start;
         }

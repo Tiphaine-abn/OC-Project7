@@ -4,11 +4,13 @@ import Banner from "../../components/Banner";
 import Collapse from "../../components/Collapse";
 import Img2 from '../../assets/Img2.png'
 
+// Composant pour afficher la page "À propos"
 export default function About() {
     return (
         <>
             <Header />
             <main className="main">
+                {/* Affichage de la bannière avec une image spécifique et une classe CSS supplémentaire */}
                 <Banner img={Img2} text="" additionalClass="about-banner" />
                 <section className="collapse-section">
                     <Collapse title="Fiabilité">

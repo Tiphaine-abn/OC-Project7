@@ -1,3 +1,4 @@
+// Section contenant les informations principales du logement
 .infos-section {
     display: flex;
     justify-content: space-between;
@@ -5,6 +6,7 @@
     width: 100%;
 }
 
+// Conteneur pour les titres
 .titles-contener {
     margin-bottom: 25px;
 
@@ -25,6 +27,7 @@
     }
 }
 
+// Conteneur pour les informations sur l'hôte et les évaluations
 .host-rate-container {
     display: flex;
     flex-direction: column;
@@ -56,6 +59,7 @@
     }
 }
 
+// Conteneur pour les sections repliables de la description et des équipements
 .accommodation-collapse-container {
     display: flex;
     justify-content: space-between;
@@ -83,6 +87,7 @@ ul {
     margin: 0;
 }
 
+// Styles pour les écrans de moins de 768px et 375px (responsive)
 @media screen and (max-width: 768px) {
     .infos-section {
         flex-direction: column;
