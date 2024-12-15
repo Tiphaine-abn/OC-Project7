@@ -25,7 +25,7 @@ const router = createBrowserRouter([
     path: "*",
     element: <NotFound />,
   },
-]);
+], { basename: "/OC-Project7" });
 
 // Composant principal de l'application
 export default function App() {
